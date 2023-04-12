@@ -8,7 +8,7 @@ pipeline{
         }
         stage('2-system update'){
             steps{
-                sh 'sudo apt update -y'
+                sh 'pwd'
             }
         }
         stage('parallel-job1'){
@@ -29,7 +29,7 @@ pipeline{
         }
         stage('4-conditional deploy'){
             when{
-                branch 'feature'
+                branch 'main'
             }
             steps{
                 sh 'uptime'
